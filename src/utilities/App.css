@@ -1,0 +1,66 @@
+.form-body {
+  background-color: rgb(187, 231, 241);
+  color: black;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.form-head {
+  background-color: black;
+  color: antiquewhite;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.jumb-padding{
+  padding: 200px
+}
+
+.form-error-input{
+  color: red;
+  font-style: italic;
+}
+
+.flash-margin{
+  margin: 0px;
+}
+
+.test{
+  background-color: darkblue;
+  color: aliceblue;
+}
+
+.card-body-style{
+height: 120px;
+font-weight: bold;
+background-color: lightblue;
+}
+
+.card-header-style{
+  font-size: larger;
+  font-weight: bolder;
+  background-color: mediumslateblue;
+}
+
+.card-footer-style{
+  background-color: mediumturquoise;
+}
+
+.card-btn-style{
+  background-color: slateblue;
+}
+
+.card-btn-style:hover {
+  background-color: rgb(197, 71, 255);
+  color: black;
+  font-weight: 600;
+}
+
+.article-top{
+  color: mintcream;
+}
+
+.card-bg{
+  background-color: black;
+}
+
