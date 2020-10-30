@@ -24,7 +24,7 @@ export default function Posts() {
       })
       .catch(err=> {
         setPostsIsLoading(false)
-        setErrors(err)
+        setErrors(['unable to fetch data'])
       })
   }, [])
 
@@ -32,16 +32,13 @@ export default function Posts() {
   return postsIsLoading ?  <Loading /> : (
     <div className='bg-dark'>
       <div className='container-fluid'>
-        
+        {Errors.length > 0 ? <div className='alert alert-danger'>{Errors} </div> : null }
         <div className='row justify-content-center'>
           <div className='col-md-10 text-center'>
             <div className='mt-5 article-top' >
               <h1>Articles</h1><br/>
             </div>
             <Link className='btn btn-outline-primary btn-md text-left' to='/posts/new'>New Post</Link>
-            {
-            Errors.length > 0 ? <div className='alert alert-danger'>{Errors} </div> : null 
-              }
             <div className='row justify-content-center '>
               {Posts.map(post =>(
                 <Post key={post.id} post={post} />

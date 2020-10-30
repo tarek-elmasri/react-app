@@ -18,7 +18,10 @@ export default function AuthByEmailAndPassword() {
       .catch(err=>{
         setIsLoading(false)
         ls.clear()
-        setErrors([err.response.data.errors])
+        setErrors([
+          err.response.status===504 ? 'Unable to connect to server' :
+          err.response.data.errors
+        ])
       })
       
   }

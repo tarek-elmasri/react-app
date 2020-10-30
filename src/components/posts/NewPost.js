@@ -10,6 +10,7 @@ export default function NewPost() {
   const history=useHistory()
   const[user] = useContext(appContext)
   const [isLoading, setIsLoading] = useState(false)
+  const [Errors,setErrors] = useState([])
 
   return (
     <Formik 
@@ -23,7 +24,7 @@ export default function NewPost() {
         })
         .catch(res => {
           setIsLoading(false)
-          console.log(res)
+          setErrors(['Error during connecting to server'])
         })
     }}
     validationSchema={Yup.object({
@@ -36,6 +37,7 @@ export default function NewPost() {
         <div className='row justify-content-center'>
           <div className='col-sm-10 col-md-9 mt-5' >
             <div className='card'>
+              {Errors.length >0 ? <div className='alert alert-danger'>{Errors} </div> : null }
               <div className='card-header form-head'>
                 Create New Post
               </div>
