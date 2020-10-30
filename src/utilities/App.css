@@ -1,5 +1,18 @@
+@media(max-width: 376px){
+  .headerH1 {
+    font-size: 1.5rem;
+  }
+  .headerSmall{
+    font-size: 1rem;
+  }
+
+
+}
+
+
+
 .form-body {
-  background-color: rgb(187, 231, 241);
+  background-image: linear-gradient(to bottom left , blue , rgb(187, 231, 241)) ;
   color: black;
   font-size: medium;
   font-weight: bold;
@@ -12,8 +25,10 @@
   font-weight: bolder;
 }
 
-.jumb-padding{
-  padding: 200px
+.jumb-padding {
+  border: 2px  solid  black;
+  margin-top: 2px;
+  
 }
 
 .form-error-input{
@@ -31,19 +46,19 @@
 }
 
 .card-body-style{
-height: 120px;
+height: 80px;
 font-weight: bold;
-background-color: lightblue;
+background-color: #c875cf;
 }
 
 .card-header-style{
   font-size: larger;
   font-weight: bolder;
-  background-color: mediumslateblue;
+  background-color: #F5B3EF;
 }
 
 .card-footer-style{
-  background-color: mediumturquoise;
+  background-color: #F5B3EF;
 }
 
 .card-btn-style{
@@ -51,9 +66,9 @@ background-color: lightblue;
 }
 
 .card-btn-style:hover {
-  background-color: rgb(197, 71, 255);
+  background-color:#c875cf;
   color: black;
-  font-weight: 600;
+  
 }
 
 .article-top{

@@ -4,6 +4,7 @@ import { useHistory, useParams} from 'react-router-dom'
 import Loading from '../../utilities/Loading'
 
 export default function ReadPost() {
+  const posts_api= process.env.REACT_APP_API_GET_POSTS
   const history= useHistory()
   const {id} = useParams();
   const [Post, setPost] = useState({title: "" , body: "" , id: null})
@@ -11,14 +12,14 @@ export default function ReadPost() {
 
   useEffect(() => {
 
-    Axios.get(`/api/v1/posts/${id}`)
+    Axios.get(`${posts_api}/${id}`)
     .then(res => {
       setIsLoading(false)
       setPost(res.data.post)
     })
     .catch(err=>{
       setIsLoading(false)
-        history.replace('/post?err=res&ds_pNF')
+        history.replace('/post?err=postnotfound')
     })
     
   }, [])
@@ -26,9 +27,17 @@ export default function ReadPost() {
   
 
   return  isLoading ? <Loading /> : (
-    <div>
-      {Post.title}<br/>
-      {Post.body}
+    <div className='container-fluid mt-4'>
+      <div className='row justify-content-center'>
+        <div className='col-sm-10 col-md-10'>
+          <h1 className='headerH1'>{Post.title} :</h1>
+          <br/>
+          <p className='headerSmall'>
+            {Post.body}
+          </p>
+
+        </div>
+      </div>
     </div>
   )
 }
