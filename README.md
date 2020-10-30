@@ -1,4 +1,4 @@
-This is a simple posts app using react for frontend and external custom backend API located >> [Backend API for posts app](https://github.com/tarek-elmasri).
+This is a simple posts app using react for frontend and external custom backend API located >> [Backend API for posts app](https://github.com/tarek-elmasri/Api_for_react_app).
 
 **Note: this is a self individual learning app**
 
