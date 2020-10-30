@@ -9,8 +9,6 @@
 
 }
 
-
-
 .form-body {
   background-image: linear-gradient(to bottom left , blue , rgb(187, 231, 241)) ;
   color: black;
@@ -28,7 +26,7 @@
 .jumb-padding {
   border: 2px  solid  black;
   margin-top: 2px;
-  
+
 }
 
 .form-error-input{

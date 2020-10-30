@@ -39,6 +39,9 @@ export default function Posts() {
               <h1>Articles</h1><br/>
             </div>
             <Link className='btn btn-outline-primary btn-md text-left' to='/posts/new'>New Post</Link>
+            {
+            Errors.length > 0 ? <div className='alert alert-danger'>{Errors} </div> : null 
+              }
             <div className='row justify-content-center '>
               {Posts.map(post =>(
                 <Post key={post.id} post={post} />
